@@ -50,15 +50,17 @@
             android:exported="false" />
 
         <activity 
+            android:name=".VenderActivity" 
+            android:exported="false" />
+
+        <activity 
             android:name=".CamaraActivity"
             android:exported="false"/>
         
         <activity 
             android:name=".NetworkActivity" 
             android:exported="false"/>
-        <activity 
-            android:name=".VenderActivity" 
-            android:exported="false" />
+        
 
         <provider
             android:name="androidx.core.content.FileProvider"

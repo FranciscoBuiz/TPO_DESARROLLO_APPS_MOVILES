@@ -29,5 +29,9 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this, RegisterStep1Activity::class.java)
             startActivity(intent)
         }
+
+        findViewById<TextView>(R.id.tvCreateAccount).setOnClickListener {
+            startActivity(Intent(this, RegisterStep1Activity::class.java))
+        }
     }
 }
