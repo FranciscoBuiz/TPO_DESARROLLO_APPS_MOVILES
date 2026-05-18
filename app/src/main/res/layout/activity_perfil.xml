@@ -182,12 +182,10 @@
                 android:layout_height="60dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginBottom="32dp"
-                android:backgroundTint="@color/white"
+                android:background="@drawable/bg_tag_border"
                 android:text="CERRAR SESIÓN"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                android:strokeColor="@color/black"
-                android:strokeWidth="1dp" />
+                android:textStyle="bold" />
 
         </LinearLayout>
     </ScrollView>
@@ -273,7 +271,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/black"
+            android:background="@color/yellow_primary"
             android:gravity="center"
             android:orientation="vertical"
             android:clickable="true"

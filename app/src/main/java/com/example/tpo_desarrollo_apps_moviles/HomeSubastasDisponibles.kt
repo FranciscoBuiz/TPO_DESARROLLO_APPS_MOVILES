@@ -27,5 +27,8 @@ class HomeSubastasDisponibles : AppCompatActivity() {
         findViewById<LinearLayout>(R.id.menu_vender)?.setOnClickListener {
             startActivity(Intent(this, VenderActivity::class.java))
         }
+        findViewById<LinearLayout>(R.id.menu_perfil)?.setOnClickListener {
+            startActivity(Intent(this, PerfilActivity::class.java))
+        }
     }
 }

@@ -23,6 +23,9 @@ class DetalleSubastaActivity : AppCompatActivity() {
             val intent = Intent(this, VenderActivity::class.java)
             startActivity(intent)
         }
-        // Agregamos lógica para "Subasta" si quieres que refresque o vaya a otra lista
+        findViewById<LinearLayout>(R.id.menu_perfil)?.setOnClickListener {
+            val intent = Intent(this, PerfilActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

@@ -106,6 +106,7 @@ class VenderActivity : AppCompatActivity() {
                 
                 if (archivoFoto != null && archivoFoto.exists()) {
                     val bitmap = BitmapFactory.decodeFile(archivoFoto.absolutePath)
+                    // Nota: Asegúrate de que el layout tenga iv_pieza si quieres mostrar el preview
                     val ivPieza = findViewById<ImageView>(R.id.iv_pieza)
                     
                     if (ivPieza != null) {
@@ -114,7 +115,9 @@ class VenderActivity : AppCompatActivity() {
                         fotoCapturada = true
                         Toast.makeText(this, "Foto del artículo cargada", Toast.LENGTH_SHORT).show()
                     } else {
-                        Toast.makeText(this, "Error: No se encontró el ImageView 'iv_pieza'", Toast.LENGTH_LONG).show()
+                        // Si no hay iv_pieza, igual marcamos como capturada si el archivo existe
+                        fotoCapturada = true
+                        Toast.makeText(this, "Foto capturada correctamente", Toast.LENGTH_SHORT).show()
                     }
                 } else {
                     Toast.makeText(this, "Error al procesar el archivo de imagen", Toast.LENGTH_SHORT).show()
@@ -133,6 +136,11 @@ class VenderActivity : AppCompatActivity() {
         
         findViewById<LinearLayout>(R.id.menu_subasta)?.setOnClickListener {
             val intent = Intent(this, DetalleSubastaActivity::class.java)
+            startActivity(intent)
+        }
+
+        findViewById<LinearLayout>(R.id.menu_perfil)?.setOnClickListener {
+            val intent = Intent(this, PerfilActivity::class.java)
             startActivity(intent)
         }
     }
