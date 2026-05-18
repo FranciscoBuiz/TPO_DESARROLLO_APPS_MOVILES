@@ -21,12 +21,12 @@ class MainActivity : AppCompatActivity() {
         progressAnimator.addListener(object : Animator.AnimatorListener {
             override fun onAnimationStart(animation: Animator) {}
 
+            // Dentro de onAnimationEnd en MainActivity.kt
             override fun onAnimationEnd(animation: Animator) {
-                // Cuando termina la animación, pasamos a la siguiente pantalla
-                val intent = Intent(this@MainActivity, HomeSubastasDisponibles::class.java)
+                val intent = Intent(this@MainActivity, LoginActivity::class.java) // Cambiado a Login
                 startActivity(intent)
-                finish()
-            }
+                finish() // Para que el usuario no pueda volver atrás a la pantalla de carga
+        }
 
             override fun onAnimationCancel(animation: Animator) {}
             override fun onAnimationRepeat(animation: Animator) {}

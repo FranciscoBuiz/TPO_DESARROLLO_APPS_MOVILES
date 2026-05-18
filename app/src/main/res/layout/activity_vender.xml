@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Título -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="SECCIÓN DE VENDEDORES"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Vender"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:text="Complete el formulario técnico para solicitar la inclusión de su pieza en nuestra próxima subasta curada."
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <!-- DOCUMENTACIÓN VISUAL -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="DOCUMENTACIÓN VISUAL"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <!-- Container para tomar fotos -->
+            <FrameLayout
+                android:id="@+id/containerTakePhotos"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/bg_tag_border"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="➕"
+                        android:textSize="32sp"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MIN 6 FOTOS"
+                        android:textStyle="bold"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FORMATO JPG/PNG"
+                        android:textSize="12sp"
+                        android:textColor="@color/gray_text" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- Preview de fotos -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+                <LinearLayout
+                    android:id="@+id/photosContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
+
+            <!-- NOMBRE DE LA OBRA -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="NOMBRE DE LA OBRA"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etNombreObra"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/bg_tag_border"
+                android:hint="P. EJ. SILLA BARRERA"
+                android:padding="12dp"
+                android:textColor="@color/black" />
+
+            <!-- ARTISTA / DISEÑADOR -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="ARTISTA / DISEÑADOR"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etArtista"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="NOMBRE COMPLETO"
+                android:padding="12dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/bg_tag_border" />
+
+            <!-- DESCRIPCIÓN TÉCNICA -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="DESCRIPCIÓN TÉCNICA"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:hint="MATERIALES, DIMENSIONES, ESTADO DE CONSERVACIÓN..."
+                android:padding="12dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/bg_tag_border"
+                android:gravity="top" />
+
+            <!-- PROCEDENCIA E HISTORIA -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="PROCEDENCIA E HISTORIA"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etProcedencia"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:hint="HISTORIA DE PROPIEDAD, EXPOSICIONES ANTERIORES..."
+                android:padding="12dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/bg_tag_border"
+                android:gravity="top" />
+
+            <!-- CHECKBOX DE LEGALIDAD -->
+            <CheckBox
+                android:id="@+id/cbDeclaracion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:text="DECLARO QUE SOY EL PROPIETARIO LEGAL DE LA PIEZA Y QUE TODA LA INFORMACIÓN PROPORCIONADA ES VERÍDICA BAJO MI RESPONSABILIDAD."
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <!-- BOTÓN ENVIAR -->
+            <Button
+                android:id="@+id/btnEnviarSolicitud"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="ENVIAR SOLICITUD"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:background="@drawable/bg_button_yellow"
+                android:layout_marginBottom="16dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+    android:id="@+id/bottom_navigation"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:elevation="8dp"
+    app:layout_constraintBottom_toBottomOf="parent">
+
+    <!-- BOTÓN INICIO (Normal) -->
+    <LinearLayout
+        android:id="@+id/menu_inicio"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:focusable="true">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_today"
+            app:tint="@color/black" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INICIO"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <!-- BOTÓN SUBASTA (Normal) -->
+    <LinearLayout
+        android:id="@+id/menu_subasta"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:focusable="true">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_agenda"
+            app:tint="@color/black" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SUBASTA"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <!-- BOTÓN VENDER (Activo - Amarillo) -->
+    <LinearLayout
+        android:id="@+id/menu_vender"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/yellow_primary"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:focusable="true">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_input_add"
+            app:tint="@color/black" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VENDER"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <!-- BOTÓN PERFIL (Normal) -->
+    <LinearLayout
+        android:id="@+id/menu_perfil"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:focusable="true">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_myplaces"
+            app:tint="@color/black" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PERFIL"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+    </LinearLayout>
+</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
