@@ -83,6 +83,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/etEmail"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginTop="4dp"
@@ -109,6 +110,7 @@
                 android:background="@drawable/bg_tag_border">
 
                 <EditText
+                    android:id="@+id/etPassword"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
@@ -151,6 +153,7 @@
                 android:background="@drawable/bg_tag_border">
 
                 <EditText
+                    android:id="@+id/etConfirmPassword"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
@@ -177,6 +180,7 @@
                 android:orientation="horizontal">
 
                 <CheckBox
+                    android:id="@+id/cbTerminos"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
