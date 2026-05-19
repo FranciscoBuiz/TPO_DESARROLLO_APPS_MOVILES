@@ -1,0 +1,27 @@
+{
+  "name": "tpo_desarrollo_apps_mobiles",
+  "version": "1.0.0",
+  "private": true,
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "expo": "^49.0.0",
+    "expo-image-picker": "~14.1.1",
+    "expo-status-bar": "~1.6.0",
+    "react": "18.2.0",
+    "react-native": "0.72.8",
+    "@react-navigation/native": "^6.1.7",
+    "@react-navigation/native-stack": "^6.10.0",
+    "react-native-safe-area-context": "^5.8.0",
+    "react-native-screens": "~3.22.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.0",
+    "babel-preset-expo": "~9.6.0"
+  }
+}

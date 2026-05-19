@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "TPO Desarrollo Apps Móviles",
+    "slug": "tpo-desarrollo-apps-moviles",
+    "version": "1.0.0",
+    "sdkVersion": "49.0.0",
+    "platforms": ["android", "ios", "web"],
+    "assetBundlePatterns": ["**/*"],
+    "orientation": "portrait",
+    "splash": {
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "ios": {
+      "supportsTablet": true
+    }
+  }
+}
